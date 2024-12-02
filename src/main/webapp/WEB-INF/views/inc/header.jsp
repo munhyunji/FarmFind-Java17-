@@ -31,6 +31,11 @@
         
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="${path}/resources/css/styles.css" rel="stylesheet" />
+        <link href="${path}/resources/css/home_styles.css" rel="stylesheet" />
+        <link href="${path}/resources/css/sidebar_styles.css" rel="stylesheet" />
+        <link href="${path}/resources/css/itemList_styles.css" rel="stylesheet" />
+        <link href="${path}/resources/css/itemDetail_styles.css" rel="stylesheet" />
+
         <!-- <script type="text/Javascript" src="${path}/resources/js/scripts.js"></script>-->
         
     </head>
