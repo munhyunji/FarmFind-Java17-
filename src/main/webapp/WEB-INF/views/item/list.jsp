@@ -2,129 +2,6 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="../inc/header.jsp"%>
 
-<style>
-
-/*Pagination*/
-.c-tbl-paging {
-	margin-top: 12px;
-	margin-left: 20px;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-}
-
-.page-link {
-	width: 24px;
-	height: 24px;
-	line-height: 24px;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	color: #d2d2d1;
-	cursor: pointer;
-	font-weight: bold;
-}
-
-#c-pagination { > ul { display:flex;li { padding:02px; } } }
-
-.page-link .is-blind {
-	width: 24px;
-	height: 24px;
-	background-image:
-		url(../resources/images/ico/ico_sprites_pagination.svg);
-	background-size: auto 24px;
-	background-repeat: no-repeat;
-	overflow: hidden;
-	text-indent: 100%;
-	white-space: nowrap;
-	display: inline-block;
-}
-
-.page-link.is-active {
-	color: #494949;
-}
-
-.page-link .is-blind.p-prev {
-	background-position: -30px 0;
-}
-
-.page-link .is-blind.p-next {
-	background-position: -60px 0;
-}
-
-.page-link .is-blind.p-end {
-	background-position: -94px 0;
-}
-
-/* 부모 요소에 대한 스타일링 */
-#row {
-  position: relative; /* 위치 지정을 위해 상대 위치 설정 */
-  min-height: 340px;
-  margin-left:10px;
-}
-
-/* 가운데 정렬을 위한 스타일링 */
-#noResult {
-  position: absolute; /* 절대 위치 설정 */
-  top: 50%; /* 상단 기준으로 50% 위치로 이동 */
-  left: 50%; /* 좌측 기준으로 50% 위치로 이동 */
-  transform: translate(-50%, -50%); /* 중앙 정렬을 위해 이동 값 조정 */
-  text-align: center; /* 가운데 정렬을 위해 텍스트 정렬 설정 */
-}
-
-
-.SearchResult p {
-	text-align: right;
-}
-
-/*아이템 이미지*/
-.itemcard {
-	overflow : hidden;
-}
-.img_span {
-	width : 300px;
-	height: 200px;
-	overflow : hidden;
-}
-
-.itemcard img {
-  transition: all 0.2s linear;
-}
-.itemcard:hover img {
-  transform: scale(1.05);
-}
-
-.selected {
-	/*color : red;
-	font-weight: bold;*/
-	box-shadow : inset 0px -0.5em 0 0 rgba(204, 208, 240, 1);
-	width: fit-content;
-}
-
-.new {
-	width: 5%;
-	margin-left: 5px;
-}
-</style>
-
 <!-- Page content-->
 <div class="container">
 	<div class="row">
@@ -135,16 +12,16 @@
 		<div class="col-lg-9">
 			<!-- 아이템 리스트 -->
 			<!-- <div class="SearchResult">
-				<p><em id="SearchWord"></em>검색결과</p>					
+				<p><em id="SearchWord"></em>검색결과</p>
 			</div>
 			 -->
 			<div class="row" id="row">
-				
-				<!-- 
+
+				<!--
                             <div class="card itemcard mb-4">
                                 <a href="#!"><img class="card-img-top" src="${path }/resources/assets/img/item/깊은 바다의 침대.PNG" alt="..." />
                                 <div class="card-body">
-                                    <div class="small text-muted">2023-12</div> 
+                                    <div class="small text-muted">2023-12</div>
                                     <h2 class="card-title h6">낭만 농장 깊은 바다의 침대</h2>
                                 </div>
                                 </a>
@@ -156,7 +33,7 @@
 				<!-- c-tbl-paging -->
 				<div class="c-tbl-paging">
 					<p class="page-info">
-						Total <em id="total-pages"></em> page
+						Total <em id="total-pages"></em> pages
 					</p>
 					<nav id="c-pagination">
 						<!-- <ul>
@@ -194,7 +71,6 @@
 </html>
 <script>
 
-	
 	$(document).ready(function() {
 		setItemList(1); //아이템 리스트 세팅 
 	});
@@ -269,7 +145,7 @@
 					contentType : "application/json; charset=utf-8;",
 					dataType : 'json',
 					success : function(data) {
-										
+						//console.log(data.list);
 						let iteminfo = data.list; //아이템정보값
 						let paging = data.pagination;
 						let html = "";
@@ -293,9 +169,9 @@
 								html += "<div class='card itemcard mb-5'>";
 								
 								if(iteminfo[i].item_img_aft != null && iteminfo[i].item_img_aft != '') {
-									html += "<a href='${path}/item/detail?no="+iteminfo[i].item_no+"'><div class='img_span'><img class='card-img-top' src="+iteminfo[i].item_img_aft+" /></div>";
+									html += "<a href='${path}/item/detail?no="+iteminfo[i].item_no+"&item_nm="+iteminfo[i].item_nm+"'><div class='img_span'><img class='card-img-top' src="+iteminfo[i].item_img_aft+" /></div>";
 								} else {
-									html += "<a href='${path}/item/detail?no="+iteminfo[i].item_no+"'><div class='img_span'><img class='card-img-top' src='"+imgUrl+"' /></div>";										
+									html += "<a href='${path}/item/detail?no="+iteminfo[i].item_no+"&item_nm="+iteminfo[i].item_nm+"'><div class='img_span'><img class='card-img-top' src='"+imgUrl+"' /></div>";
 									
 								}
 								//html += "<a href='#!'><img class='card-img-top' src="+iteminfo[i].item_img_aft+" alt='...' />";
