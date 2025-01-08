@@ -41,7 +41,7 @@
     </head>
     <script>
  	 //let apiurl = "http://localhost:8090/";
-   	 let apiurl = "https://farmfindapi.store:8090/";	
+   	 let apiurl = "https://farmfindapi.shop:8090/";
     </script>
  				
     <style>
@@ -81,6 +81,8 @@
 		  }
 		  			
     </style>
+
+
  
     <body id="page-top">
         <!-- Navigation-->
@@ -112,5 +114,19 @@
                 </div>
             </div>
         </header>        
-   
+
+   <script>
+   const navbar = document.getElementById('mainNav'); // 네비게이션 바 요소
+
+   window.addEventListener('scroll', function() {
+     if (window.scrollY === 0) {
+       // 스크롤이 맨 위일 때만 navbar를 보이게
+       navbar.classList.remove('hidden');
+     } else {
+       // 스크롤을 내리면 navbar 숨기기
+       navbar.classList.add('hidden');
+     }
+   });
+   </script>
+
         

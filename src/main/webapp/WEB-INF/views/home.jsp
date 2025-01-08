@@ -6,14 +6,14 @@
 
 <section class="page-section">
 	<div class="container main-section">
-		<div class="col-md-6 main">				
+		<div class="col-md-6 main">
 			<ol>
 				<!-- <li class="visitorLi"><p class="visitorCounter">TODAY <span id="hitCt"></span></p></li>-->
 				<li class="centerline"><p >NOTICE</p></li>
 				<li><span class="lispan">01</span><p class="lip">옛 시절 부터 현재까지의 낭만 농장 아이템을 검색 하실 수 있습니다.</p></li>
 				<li><span class="lispan">02</span><p class="lip">낭만 농장 설치물에 대한 정보를 검색 하실 수 있습니다.<br> (미니어처, 하우징, 리플레이 낭농 아이템은 포함되어 있지 않습니다.)</p></li>
 				<li><span class="lispan">03</span><p class="lip">이미지, 잘못된 정보 제보 부탁드립니다.</p></li>
-				<li><span class="lispan">04</span><p class="lip">모바일 페이지는 지원하지 않습니다.</p></li>
+				<li><span class="lispan">04</span><p class="lip">모바일 페이지는 개발중 입니다.</p></li>
 				
 			</ol>
 		</div>

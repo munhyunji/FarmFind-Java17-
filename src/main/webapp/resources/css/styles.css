@@ -10832,15 +10832,24 @@ textarea.form-control-lg {
 }
 
 /* navbar 세팅 */
-
 #mainNav {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    border: none;
-    background-color: transparent;
-    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
-    background-color: rgba(255, 255, 255, .1);
-	backdrop-filter: blur(2px);
+   padding-bottom: 1.5rem;
+   border: none;
+   background-color: rgba(255, 255, 255, .1);
+   backdrop-filter: blur(2px);
+   transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
+   opacity: 1;
+   z-index: 1000;
+}
+
+#mainNav.hidden {
+   opacity: 0; /* 숨길 때 */
+   top: -100px; /* 스크롤 내리면 숨기기 */
 }
 #mainNav .navbar-toggler {
   padding: 0.75rem;
@@ -10855,6 +10864,7 @@ textarea.form-control-lg {
   font-weight: 700;
   letter-spacing: 0.0625em;
   text-transform: uppercase;
+  width: 270px;
 }
 /*#mainNav .navbar-brand img {
   height: 1.5rem;
@@ -10901,6 +10911,8 @@ textarea.form-control-lg {
     margin-right: 0;
   }
 }
+
+
 header.masthead {
   padding-top: 10.5rem;
   padding-bottom: 6rem;
