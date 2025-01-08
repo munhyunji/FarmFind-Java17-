@@ -97,22 +97,6 @@
             <artifactId>tomcat-embed-jasper</artifactId>
             <version>10.1.31</version> <!-- Tomcat 10.x 버전 맞춰서 사용 -->
         </dependency>
-
-        <!-- Jakarta Servlet API -->
-        <dependency>
-            <groupId>jakarta.servlet</groupId>
-            <artifactId>jakarta.servlet-api</artifactId>
-            <version>5.0.0</version> <!-- Tomcat 10.x와 호환되는 버전 -->
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- Jakarta JSP API -->
-        <dependency>
-            <groupId>jakarta.servlet.jsp</groupId>
-            <artifactId>jakarta.servlet.jsp-api</artifactId>
-            <version>3.0.0</version>  <!-- 최신 버전으로 수정 -->
-            <scope>provided</scope>
-        </dependency>
     </dependencies>
 
     <build>
