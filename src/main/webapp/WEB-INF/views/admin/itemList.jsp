@@ -123,7 +123,7 @@
     <script src="${path }/resources/vendor/jquery-easing/jquery.easing.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="${path }/resources/js/sb-admin-2.js"></script>
+    <script src="${path }/resources/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
     <script src="${path }/resources/vendor/datatables/jquery.dataTables.js"></script>

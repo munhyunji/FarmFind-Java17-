@@ -10,23 +10,12 @@
 
 		<!-- Blog entries-->
 		<div class="col-lg-9">
-			<!-- 아이템 리스트 -->
 			<!-- <div class="SearchResult">
 				<p><em id="SearchWord"></em>검색결과</p>
 			</div>
 			 -->
 			<div class="row" id="row">
-
-				<!--
-                            <div class="card itemcard mb-4">
-                                <a href="#!"><img class="card-img-top" src="${path }/resources/assets/img/item/깊은 바다의 침대.PNG" alt="..." />
-                                <div class="card-body">
-                                    <div class="small text-muted">2023-12</div>
-                                    <h2 class="card-title h6">낭만 농장 깊은 바다의 침대</h2>
-                                </div>
-                                </a>
-                            </div>-->
-
+                <!--아이템 리스트-->
 			</div>
 			<div class="row">
 				<!-- Pagination-->

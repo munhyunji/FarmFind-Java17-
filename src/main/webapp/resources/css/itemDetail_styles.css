@@ -75,7 +75,7 @@
 }
 
 .title {
-    margin-bottom: 20px;
+    margin: 10px 0 5px 15px;
 }
 
 input:focus {
@@ -93,7 +93,10 @@ input:focus {
 }
 
 .label-input {
-    align-items: center;
+    display: flex; /* Flexbox로 레이아웃 설정 */
+    align-items: center; /* 수직 중앙 정렬 */
+    gap: 10px; /* label과 input 사이 간격 */
+    flex-wrap: nowrap; /* 줄바꿈 방지 */
 }
 
 .label-input label {
@@ -103,10 +106,16 @@ input:focus {
     font-weight: 400;
     color: #494949;
     margin : 5px 10px 8px 17px;
+    flex: 0 0 100px;
+    text-align: left;
+     white-space: nowrap; /* 텍스트 줄바꿈 방지 */
 }
 
 .label-input input.c-input {
-    width: 60%;
+    flex: 1;
+    min-width: 200px;
+    max-width: 100%;
+    width: 100%;
     font-family: 'NotoSansKR-Thin';
 }
 

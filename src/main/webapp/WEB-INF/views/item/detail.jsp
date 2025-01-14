@@ -9,12 +9,14 @@
 		<%@ include file="../inc/sidebar.jsp"%>
 		<!-- Blog entries-->
 		<div class="col-lg-9">
+		    <div class="label-input title">
+                <h4 id="item_nm"></h4>
+            </div>
 			<div class="detail_row">
 				<div class="info_box">
-					
-					<div class="label-input title">
+					<!--<div class="label-input title">
 						<h4 id="item_nm"></h4>
-					</div>
+					</div>-->
 					<div class="label-input line">
 						아이템
 					</div>

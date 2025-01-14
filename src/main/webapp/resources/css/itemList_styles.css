@@ -67,11 +67,31 @@
     background-position: -94px 0;
 }
 
+/* 화면이 좁아질 때: Pagination 중앙 정렬 및 줄바꿈 */
+@media (max-width: 768px) {
+  .c-tbl-paging {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #c-pagination .pagination {
+    justify-content: center;
+  }
+
+  .page-link {
+    font-size: 14px;
+  }
+}
+
 /* 부모 요소에 대한 스타일링 */
 #row {
     position: relative; /* 위치 지정을 위해 상대 위치 설정 */
     min-height: 340px;
     margin-left:10px;
+    /* 카드가 넘치면 다음 줄로 이동 */
+    flex-wrap: wrap;
+    display: flex;
 }
 
 /* 가운데 정렬을 위한 스타일링 */
@@ -91,6 +111,12 @@
 /*아이템 이미지*/
 .itemcard {
     overflow : hidden;
+}
+
+@media (max-width: 768px) {
+  .itemcard {
+    flex: 1 1 100%; /* 한 줄에 한 카드 */
+  }
 }
 .img_span {
     height: 200px;

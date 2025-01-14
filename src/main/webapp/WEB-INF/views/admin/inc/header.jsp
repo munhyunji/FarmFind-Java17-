@@ -35,7 +35,7 @@
 </head>
 	<script>
  	 //let apiurl = "http://localhost:8090/";
-   	 let apiurl = "https://farmfindapi.store:8090/";	
+   	 let apiurl = "https://farmfindapi.shop:8090/";
    	 
    	 $(document).ready(function(){
    		 let userId = sessionStorage.getItem("id");

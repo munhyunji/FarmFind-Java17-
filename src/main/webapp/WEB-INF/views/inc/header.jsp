@@ -76,7 +76,7 @@
 		    background: 
 		        url("${path}/resources/images/mainBanner_front.png") fixed 0px 0px/100% auto no-repeat, 
 		        url("${path}/resources/images/mainBanner_text.png") 0px -5px/100% auto no-repeat, 
-		        #ccede6 !important;
+		        linear-gradient(to bottom, #b2e3e2, #ffffff) !important;
 		      
 		  }
 		  			
